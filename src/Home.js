@@ -1,18 +1,28 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import brucelee from './assets/profile-bgless.png';
 
+const Styles = styled.div`
+    .main {
+        margin-top: 4em;
+        border: 1px solid red;
+    }
+`;
+
 
 export const Home = () => (
-    <Container>
-        <Row>
-            <Col>Image</Col>
-            <Col>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-</Col>
+    <Styles>
+    <Container className='main'>
+        <Row >
+            <Col 
+                className='img'><Image src={brucelee} rounded fluid/>
+            </Col>
+            <Col className='mission'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+            </Col>
         </Row>
     </Container>
+    </Styles>
 )
 
 

@@ -20,12 +20,13 @@ const Styles = styled.div`
 
 export const Navi = () => (
     <Styles>
-        <Navbar bg="dark" variant="dark" className='navbar'>
+        <Navbar bg="dark" variant="dark" fixed='top' className='navbar'>
             <Navbar.Brand href="/" className='brand'>David's Profile</Navbar.Brand>
             <Nav className='nav' >
-                <Nav.Link href="/" style={{color: 'blue'}}>Home</Nav.Link>
-                <Nav.Link href="/about" style={{color: 'blue'}}>About</Nav.Link>
-                <Nav.Link href="/pricing" style={{color: 'blue'}}>Pricing</Nav.Link>
+                <Nav.Link href="/about" style={{color: 'blue'}}>About Me</Nav.Link>
+                <Nav.Link href="/resume" style={{color: 'blue'}}>Resume</Nav.Link>
+                <Nav.Link href="/projects" style={{color: 'blue'}}>Projects</Nav.Link>
+                <Nav.Link href="/blog" style={{color: 'blue'}}>Blog</Nav.Link>
             </Nav>
         </Navbar>
     </Styles>

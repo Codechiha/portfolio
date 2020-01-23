@@ -5,6 +5,7 @@ import { About } from './About';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { Navi } from './components/Navi';
+import { Footer } from './components/Footer';
 import { Jumbotron } from './components/Jumbotron';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
                         </Switch>
                     </Router>
                 </Layout>
+                <Footer />
             </React.Fragment>
         )
     }
