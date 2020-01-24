@@ -6,7 +6,7 @@ import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { Navi } from './components/Navi';
 import { Footer } from './components/Footer';
-import { Jumbotron } from './components/Jumbotron';
+import { Cards } from './components/Cards';
 
 class App extends Component {
     render() {
@@ -21,6 +21,7 @@ class App extends Component {
                             <Route component={NoMatch} />
                         </Switch>
                     </Router>
+                    <Cards />
                 </Layout>
                 <Footer />
             </React.Fragment>

@@ -5,8 +5,9 @@ import brucelee from './assets/profile-bgless.png';
 
 const Styles = styled.div`
     .main {
-        margin-top: 4em;
         border: 1px solid red;
+        margin-top: 4em;
+
     }
 `;
 

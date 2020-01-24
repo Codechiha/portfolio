@@ -6,6 +6,7 @@ const Styles = styled.div`
     .navbar{
         flex-flow: row;
         justify-content: center;
+
     }
 
     .brand{
