@@ -3,6 +3,9 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import brucelee from './assets/profile-bgless.png';
 
+// This is the Home Page
+// Include an interactive background
+
 const Styles = styled.div`
     .main {
         border: 1px solid red;

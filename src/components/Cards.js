@@ -2,6 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
+// This portion is for the Projects I want to highlight
+// 1. The Labs Project that needs debugging
+// 2. An HTML/CSS Project
+// 3. A React Frontend Project
+// 4. A React Backend Project
+// 5. A Python Project?
+
+// Next Component should be a Contacts Section with Forms
 
 const Styles = styled.div`
     .main {

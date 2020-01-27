@@ -2,6 +2,8 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 
+// This Component is the Footer Bar
+
 const Styles = styled.div`
     .navbar{
         flex-flow: row;

@@ -8,6 +8,8 @@ import { Navi } from './components/Navi';
 import { Footer } from './components/Footer';
 import { Cards } from './components/Cards';
 
+// This Component Compiles all the separate components
+
 class App extends Component {
     render() {
         return (

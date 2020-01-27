@@ -2,6 +2,8 @@ import React from 'react';
 import { Nav, Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
+// This is the Top Navigation Bar
+
 const Styles = styled.div`
     .navbar{
         flex-flow: row;
