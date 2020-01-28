@@ -21,9 +21,9 @@ export const Footer = () => (
         <Navbar bg="dark" variant="dark" fixed='bottom' className='navbar'>
             <Nav className='nav' >
                 <Nav.Link href="https://github.com/Codechiha" style={{color: 'blue'}}>Github</Nav.Link>
-                <Nav.Link href="https://www.facebook.com/situ1" style={{color: 'blue'}}>Facebook</Nav.Link>
                 <Nav.Link href="https://www.linkedin.com/in/david-situ-8514977a/" style={{color: 'blue'}}>LinkedIn</Nav.Link>
-                <Nav.Link href="https://www.instagram.com/situske626/" style={{color: 'blue'}}>Instagram</Nav.Link>
+                <Nav.Link href="/" style={{color: 'blue'}}>Contact</Nav.Link>
+
             </Nav>
         </Navbar>
     </Styles>

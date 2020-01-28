@@ -26,10 +26,8 @@ export const Navi = () => (
         <Navbar bg="dark" variant="dark" fixed='top' className='navbar'>
             <Navbar.Brand href="/" className='brand'>David's Profile</Navbar.Brand>
             <Nav className='nav' >
-                <Nav.Link href="/about" style={{color: 'blue'}}>About Me</Nav.Link>
-                <Nav.Link href="/resume" style={{color: 'blue'}}>Resume</Nav.Link>
+                <Nav.Link href="/resume" style={{color: 'blue'}}>Skills</Nav.Link>
                 <Nav.Link href="/projects" style={{color: 'blue'}}>Projects</Nav.Link>
-                <Nav.Link href="/blog" style={{color: 'blue'}}>Blog</Nav.Link>
             </Nav>
         </Navbar>
     </Styles>
