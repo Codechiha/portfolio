@@ -17,6 +17,20 @@ const Styles = styled.div`
         border: 1px solid red;
         margin-bottom: 4em;
     }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .top-row {
+        border: 1px solid blue;
+        padding-left: 80px;
+    }
+
+    .bottom-row {
+        border: 1px solid black;
+        padding-left: 80px;
+    }
 `;
 
 
@@ -25,7 +39,7 @@ export const Cards = () => (
     <Container className='main'>
         <Row className='top-row'>
             <Col>
-                <Card style={{ width: '13em' }}>
+                <Card style={{ width: '13em'}} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>Project 1</Card.Title>
@@ -38,7 +52,7 @@ export const Cards = () => (
                 </Card>
             </Col>
             <Col>
-                <Card style={{ width: '13em' }}>
+                <Card style={{ width: '13em' }} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>Project 2</Card.Title>
@@ -53,7 +67,7 @@ export const Cards = () => (
         </Row>
         <Row className='bottom-row'>
             <Col>
-                <Card style={{ width: '13em' }}>
+                <Card style={{ width: '13em' }} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>Project 3</Card.Title>
