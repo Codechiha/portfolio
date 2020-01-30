@@ -22,6 +22,10 @@ const Styles = styled.div`
         margin-bottom: 20px;
     }
 
+    .title {
+        font-weight: bold;
+    }
+
     .top-row {
         border: 1px solid blue;
         padding-left: 80px;
@@ -42,12 +46,11 @@ export const Cards = () => (
                 <Card style={{ width: '13em'}} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
-                        <Card.Title>Project 1</Card.Title>
+                        <Card.Title className='title'>User Interface Design For the S&#38;J Company</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                            Recreated the Client's desired design and functions for their company website using <strong>HTML/CSS/JS</strong>
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" href='https://github.com/Codechiha/User-Interface-Project-Week'>Project</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -55,7 +58,7 @@ export const Cards = () => (
                 <Card style={{ width: '13em' }} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
-                        <Card.Title>Project 2</Card.Title>
+                        <Card.Title className='title'>Project 2</Card.Title>
                         <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
@@ -70,7 +73,7 @@ export const Cards = () => (
                 <Card style={{ width: '13em' }} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
-                        <Card.Title>Project 3</Card.Title>
+                        <Card.Title className='title'>Project 3</Card.Title>
                         <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
@@ -83,7 +86,7 @@ export const Cards = () => (
                 <Card style={{ width: '13em' }}>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
-                        <Card.Title>Project 4</Card.Title>
+                        <Card.Title className='title'>Project 4</Card.Title>
                         <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.

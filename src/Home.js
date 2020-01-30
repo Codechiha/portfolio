@@ -12,6 +12,10 @@ const Styles = styled.div`
         margin-top: 4em;
 
     }
+
+    .mission {
+        color: white;
+    }
 `;
 
 
