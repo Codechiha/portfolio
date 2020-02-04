@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url('./assets/matrix-rain.jpg');
+    border: 1px solid purple;
+    background-color: black;
+    /* background-image: url('./assets/red-bg.jpg'); */
     background-repeat: no-repeat;
 }

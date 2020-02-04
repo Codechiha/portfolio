@@ -8,7 +8,7 @@ import { Footer } from './components/Footer';
 import { Cards } from './Cards';
 // import './App.css';
 // import Particles from 'react-particles-js';
-import david from './assets/profile-bgless.png';
+import david from './assets/red-bg.jpg';
 
 // const particleOpt = {
 //     particles: {
@@ -41,9 +41,9 @@ class App extends Component {
                          <Switch>
                              <Route exact path='/' component={Home} />
                              <Route component={NoMatch} />
+                             <Route path='/projects' component={Cards} />
                          </Switch>
                      </Router>
-                     <Cards />
                      <Footer />
                  </Layout>
                  
