@@ -58,12 +58,11 @@ export const Cards = () => (
                 <Card style={{ width: '13em' }} className='card'>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
-                        <Card.Title className='title'>Project 2</Card.Title>
+                        <Card.Title className='title'>Front-end Interface For a Shared API to Create Notes</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                            INclude a better description for this Lambda Notes Project, The Image should link to the netlify https://thirsty-lalande-ce5308.netlify.com/
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary">The Button Link should go to the github</Button>
                     </Card.Body>
                 </Card>
             </Col>
