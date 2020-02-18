@@ -3,7 +3,21 @@ body {
     padding: 0;
     font-family: sans-serif;
     border: 1px solid purple;
-    background-color: black;
-    /* background-image: url('./assets/red-bg.jpg'); */
-    background-repeat: no-repeat;
+    background-color: #524c4c;
 }
+
+.whole-component{
+    background-image: url(./assets/profile1.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 { font-family: Helvetica; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 25.3px; } 
+
+h3 { font-family: Helvetica; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 18.7px; } p { font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+
+blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
+
+pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }

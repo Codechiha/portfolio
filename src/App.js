@@ -33,21 +33,16 @@ import david from './assets/red-bg.jpg';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className='whole-component'>
                 {/* <Particles params={particleOpt} /> */}
-                 <Layout>
                      <Navi />
                      <Router>
                          <Switch>
                              <Route exact path='/' component={Home} />
-                             <Route component={NoMatch} />
-                             <Route path='/projects' component={Cards} />
+                             {/* <Route component={NoMatch} /> */}
+                             {/* <Route path='/projects' component={Cards} /> */}
                          </Switch>
                      </Router>
-                     <Footer />
-                 </Layout>
-                 
-
             </div>
         )
     }
