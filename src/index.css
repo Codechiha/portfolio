@@ -4,14 +4,7 @@ body {
     font-family: sans-serif;
     border: 1px solid purple;
     background-color: #524c4c;
-}
-
-.whole-component{
-    background-image: url(./assets/profile1.jpg);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
 }
 
 h1 { font-family: Helvetica; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 25.3px; } 

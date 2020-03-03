@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+//Also just a filler
+import brucelee from './assets/matrix-rain.jpg';
 import styled from 'styled-components';
 
 // This portion is for the Projects I want to highlight
@@ -16,6 +18,10 @@ const Styles = styled.div`
         margin-top: 2em;
         border: 1px solid red;
         margin-bottom: 4em;
+        background-image: url(${brucelee});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .card {

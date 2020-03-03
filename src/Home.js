@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Image, Button, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
-import brucelee from './assets/profile-gray.jpg';
+//This is just a filler background for now until i get a professionally digital photo
+import brucelee from './assets/red-bg.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -17,6 +18,13 @@ const Styles = styled.div`
 
     profile-img {
         border: 1px solid white;
+    }
+
+    .main {
+        background-image: url(${brucelee});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .mission {
@@ -60,8 +68,7 @@ const Styles = styled.div`
 
 export const Home = () => (
     <Styles>
-    {/* <Container className='main'> */}
-
+    <div className='main'>
         <div className='mission'>
             <h1>David Situ</h1>
             <p>Full Stack Web Developer</p>
@@ -73,8 +80,7 @@ export const Home = () => (
                 <a href='#'>{contact}</a>
             </div> */}
         </div>
-
-    {/* </Container> */}
+    </div>
     </Styles>
 )
 
