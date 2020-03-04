@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Row, Col, Image, Button, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 //This is just a filler background for now until i get a professionally digital photo
 import brucelee from './assets/red-bg.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Navi } from './components/Navi';
 
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
@@ -59,7 +59,6 @@ const Styles = styled.div`
     .social-links {
         flex-flow: row;
         justify-content: space-between;
-
         border: 1px solid white;
     }
 `;
@@ -69,6 +68,7 @@ const Styles = styled.div`
 export const Home = () => (
     <Styles>
     <div className='main'>
+        <Navi />
         <div className='mission'>
             <h1>David Situ</h1>
             <p>Full Stack Web Developer</p>
