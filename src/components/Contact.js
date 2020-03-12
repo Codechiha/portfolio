@@ -1,8 +1,51 @@
 import React, {Component} from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import axios from 'axios';
 
 class Contact extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        }
+    }
+
+    onNameChange(event) {
+        this.setState({ name: event.target.value })
+    };
+
+    onEmailChange(event) {
+        this.setState({ email: event.target.value })
+    };
+
+    onMessageChange(event) {
+        this.setState({ message: event.target.value })
+    };
+
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log(this.state);
+        axios({
+            method: "POST", 
+            url:"http://localhost:3002/send", 
+            data:  this.state
+          }).then((response)=>{
+            if (response.data.status === 'success'){
+              alert("Message Sent."); 
+              this.resetForm()
+            }else if(response.data.status === 'fail'){
+              alert("Message failed to send.")
+            }
+          })
+    }
+
+    resetForm() {
+        this.setState({ name: '', email: '', message: '' })
+    }
+
     render(){
         return(
             <Container>
@@ -14,13 +57,28 @@ class Contact extends Component {
                         <p>
                             For your convenience, fill in the form to the right or click on my email address below to send me your interest
                         </p>
+                        <a>DavidSitu626@gmail.com</a>
                     </Col>
                     <Col>
-                        {/* add forms and button to send email */}
+                    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                        <div className="form-group">
+                            <label htmlFor="name">Company Name</label>
+                            <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="message">Message</label>
+                            <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
+                        </div>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
                     </Col>
                 </Row>
                 <div className='social-media'>
-
+                    Icon 1, 2, 3, 4
                 </div>
             </Container>
         )
