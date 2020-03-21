@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home } from './Home';
+import { Home } from './components/Home';
 import { Cards } from './Cards';
 import Contact from './components/Contact';
 

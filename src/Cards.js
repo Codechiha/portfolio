@@ -26,6 +26,7 @@ const Styles = styled.div`
 
     .card {
         margin-bottom: 20px;
+
     }
 
     .title {

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 //This is just a filler background for now until i get a professionally digital photo
-import brucelee from './assets/red-bg.jpg';
+import brucelee from '../assets/red-bg.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { Navi } from './components/Navi';
+import { Navi } from './Navi';
 
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
@@ -20,16 +20,16 @@ const Styles = styled.div`
         border: 1px solid white;
     }
 
-    .main {
-        background-image: url(${brucelee});
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    // .main {
+    //     background-image: url(${brucelee});
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    // }
 
     .mission {
         display: flex;
-        color: white;
+        color: black;
         flex-direction: column;
         align-items: center;
         justify-content: center;
