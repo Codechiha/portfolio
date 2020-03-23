@@ -1,16 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
 
+//Components
 import { NavLink } from 'react-router-dom';
 
+//Fonts and Images
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+//Styling
+import styled from 'styled-components';
 
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 const contact = <FontAwesomeIcon icon={faEnvelope} />
-// This is the Top Navigation Bar
 
 const Styles = styled.div`
 
@@ -67,9 +70,9 @@ export const Navi = () => (
                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
                 </div>
                 <div className='social-media'>
-                    <a href='#'>{github}</a>
-                    <a href='#'>{linkedin}</a>
-                    <a href='#'>{contact}</a>
+                    <a href='https://github.com/Codechiha'>{github}</a>
+                    <a href='https://www.linkedin.com/in/david-situ-8514977a/'>{linkedin}</a>
+                    <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting'>{contact}</a>
                 </div>
             </div>
         </div>

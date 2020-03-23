@@ -1,5 +1,9 @@
 import React from 'react';
+
+//Components
 import { Navi } from './Navi';
+
+//Styling
 import {Container, Row, Col} from 'react-bootstrap';
 import styled from 'styled-components';
 

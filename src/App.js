@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { About } from './components/About';
-import { Home } from './components/Home';
-import { Cards } from './components/Cards';
-import Contact from './components/Contact';
+
+//React Libraries
 import { Route } from 'react-router-dom';
 
+//Components
+import { About } from './components/About';
+import { Home } from './components/Home';
+import { Projects } from './components/Projects';
+import Contact from './components/Contact';
+
+//Styling
 import styled from 'styled-components';
 
 const Styles = styled.div`
@@ -30,7 +35,7 @@ class App extends Component {
                         render= {props => <Home  {...props} />}
                     />
                     <Route path='/projects' 
-                        render= {props => <Cards  {...props} />}
+                        render= {props => <Projects  {...props} />}
                     />
                     <Route path='/about' 
                         render= {props => <About  {...props} />}

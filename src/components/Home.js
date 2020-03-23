@@ -1,11 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
-//This is just a filler background for now until i get a professionally digital photo
-import brucelee from '../assets/red-bg.jpg';
+
+//Components
+import { Navi } from './Navi';
+
+//Fonts and Images
+import redbg from '../assets/red-bg.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { Navi } from './Navi';
+
+//Styling
+import styled from 'styled-components';
+
 
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -18,7 +24,7 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
     // .main {
-    //     background-image: url(${brucelee});
+    //     background-image: url(${redbg});
     //     background-position: center;
     //     background-repeat: no-repeat;
     //     background-size: cover;
