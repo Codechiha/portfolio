@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 //Also just a filler
-import brucelee from './assets/matrix-rain.jpg';
+import brucelee from '../assets/matrix-rain.jpg';
 import styled from 'styled-components';
+
+import { Navi } from './Navi';
 
 // This portion is for the Projects I want to highlight
 // 1. The Labs Project that needs debugging
@@ -47,6 +49,7 @@ const Styles = styled.div`
 
 export const Cards = () => (
     <Styles>
+        <Navi />
     <Container className='main'>
         <Row className='top-row'>
             <Col>

@@ -7,6 +7,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { Navi } from './Navi';
 
+import { Container, Row, Col } from 'react-bootstrap';
+
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 const contact = <FontAwesomeIcon icon={faEnvelope} />
@@ -15,11 +17,6 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 // Include an interactive background
 
 const Styles = styled.div`
-
-    profile-img {
-        border: 1px solid white;
-    }
-
     // .main {
     //     background-image: url(${brucelee});
     //     background-position: center;
@@ -27,39 +24,25 @@ const Styles = styled.div`
     //     background-size: cover;
     // }
 
-    .mission {
+    .skill1 {
         display: flex;
         color: black;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 50px;
         border: 1px solid red;
-        margin-top: 3em;
-        min-height: 568px;
-
-        h1 {
-            font-size: 50px;
-        }
-        
-        p {
-            border: 1px solid black;
-            margin: 2em auto;
-            font-size: 20px;
-        }
-
-        .projects-link {
-            color: white;
-        }
+        min-height: 500px;
     }
 
-    .projects-button {
-        margin-bottom: 20px;
-    }
-
-    .social-links {
-        flex-flow: row;
-        justify-content: space-between;
-        border: 1px solid white;
+    .skill2 {
+        display: flex;
+        color: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        border: 1px solid red;
+        min-height: 500px;
     }
 `;
 
@@ -69,17 +52,18 @@ export const Home = () => (
     <Styles>
     <div className='main'>
         <Navi />
-        <div className='mission'>
-            <h1>David Situ</h1>
-            <p>Full Stack Web Developer</p>
-            {/* <p>Build beautiful websites</p>            */}
-            {/* <Button className='projects-button'><Nav.Link href="/projects" className='projects-link'>Projects</Nav.Link></Button> */}
-            {/* <div className='social-links'>
-                <a href='#'>{github}</a>
-                <a href='#'>{linkedin}</a>
-                <a href='#'>{contact}</a>
-            </div> */}
-        </div>
+        <Container fluid className='main'>
+        <Row >
+            <Col className='skill1'>
+                <h4>David Situ</h4>
+                <p>Full Stack Web Developer</p>
+            </Col>
+            <Col className='skill2'>
+                <h4>Why Does this Look all weird</h4>
+                <p>Change the classNames for both Cols and move them. Then put a background image that is photoshopped of me.</p>
+            </Col>
+        </Row>
+        </Container>
     </div>
     </Styles>
 )

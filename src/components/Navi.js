@@ -59,11 +59,11 @@ const Styles = styled.div`
 export const Navi = () => (
     <Styles>
         <div variant="dark" fixed='top' className='navbar'>
-            <h1 href="/" className='brand'>David's Profile</h1>
+            <NavLink exact to="/" className='brand'>David's Profile</NavLink>
             <div className='links'>
                 <div className='worded'>
                     <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
-                    <NavLink to="/resume" style={{color: 'white'}}>Skills</NavLink>
+                    <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' style={{color: 'white'}}>Resume</a>
                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
                 </div>
                 <div className='social-media'>
