@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { NavLink } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -60,9 +62,9 @@ export const Navi = () => (
             <h1 href="/" className='brand'>David's Profile</h1>
             <div className='links'>
                 <div className='worded'>
-                    <a href="/about" style={{color: 'white'}}>About</a>
-                    <a href="/resume" style={{color: 'white'}}>Skills</a>
-                    <a href="/projects" style={{color: 'white'}}>Projects</a>
+                    <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
+                    <NavLink to="/resume" style={{color: 'white'}}>Skills</NavLink>
+                    <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
                 </div>
                 <div className='social-media'>
                     <a href='#'>{github}</a>
