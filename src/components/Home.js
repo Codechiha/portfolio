@@ -37,7 +37,6 @@ const Styles = styled.div`
         align-items: center;
         justify-content: flex-start;
         padding-top: 50px;
-        border: 1px solid red;
         min-height: 500px;
     }
 
@@ -46,8 +45,7 @@ const Styles = styled.div`
         color: black;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-        border: 1px solid red;
+        justify-content: center;
         min-height: 500px;
     }
 `;
@@ -58,7 +56,7 @@ export const Home = () => (
     <Styles>
     <div className='main'>
         <Navi />
-        <Container fluid className='main'>
+        <Container className='main'>
         <Row >
             <Col className='skill1'>
                 <h4>David Situ</h4>

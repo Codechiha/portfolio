@@ -24,7 +24,7 @@ export const About = () => (
     <div>
         <Styles>
             <Navi />
-            <Container fluid className='main'>
+            <Container className='main'>
                 <Row>
                     <Col className='about'>
                         <h3>David Situ</h3>
