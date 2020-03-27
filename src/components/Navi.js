@@ -26,23 +26,19 @@ const Styles = styled.div`
         justify-content: space-between;
         height: 4em;
         width: 100%;
-        background-color: black;
-        border: 1px solid yellow;
-    }
+        background-color: black;    }
 
     .brand{
         color: white;
     }
 
     .links {
-        border: 1px solid white;
         width: 45%;
         display: flex;
         flex-direction: row;
     }
 
     .worded {
-        border: 1px solid purple;
         margin-right: 10%;
         width: 55%;
         display: flex;
@@ -51,7 +47,6 @@ const Styles = styled.div`
     }
 
     .social-media {
-        border: 1px solid lightblue;
         width: 35%;
         display: flex;
         justify-content: space-between;

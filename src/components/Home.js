@@ -4,7 +4,7 @@ import React from 'react';
 import { Navi } from './Navi';
 
 //Fonts and Images
-import redbg from '../assets/red-bg.jpg';
+import me from '../assets/casual-removed-background.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -23,12 +23,15 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 // Include an interactive background
 
 const Styles = styled.div`
-    // .main {
-    //     background-image: url(${redbg});
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    // }
+    .main {
+        background-image: url(${me});
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: calc(100vh - var(--navbar-height));
+        z-index: -1;
+        filter: contrast(80%);
+        opacity: 85%;
+    }
 
     .skill1 {
         display: flex;
@@ -54,7 +57,7 @@ const Styles = styled.div`
 
 export const Home = () => (
     <Styles>
-    <div className='main'>
+    <div>
         <Navi />
         <Container className='main'>
         <Row >
@@ -63,8 +66,8 @@ export const Home = () => (
                 <p>Full Stack Web Developer</p>
             </Col>
             <Col className='skill2'>
-                <h4>Why Does this Look all weird</h4>
-                <p>Change the classNames for both Cols and move them. Then put a background image that is photoshopped of me.</p>
+                <h4>Full-Stack Web Developer</h4>
+                <p>Encompasses Front-end and Back-end web development</p>
             </Col>
         </Row>
         </Container>
