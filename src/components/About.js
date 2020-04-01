@@ -19,10 +19,23 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
 
+    a {
+        color: black;
+    }
+
     .main {
-        min-height: 570px;
-        border: 1px solid red;
         margin-top: 10px;
+    }
+
+    .row {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        min-height: 600px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        border-radius: 1%;
     }
 
     .about{
@@ -35,11 +48,6 @@ const Styles = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-    }
-
-    img {
-        width: 100%;
-        height: 400px;
     }
 `
 export const About = () => (
@@ -67,7 +75,7 @@ export const About = () => (
                         
                     </Col>
                     <Col className='pic'>
-                        <img src={me} />
+                        <img src={me} style={{width: '100%', height: '400px'}} />
                     </Col>
                 </Row>
             </Container>

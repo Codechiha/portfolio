@@ -46,7 +46,7 @@ const Styles = styled.div`
         margin-bottom: 20px;
         display: flex;
         flex-direction: row;
-        min-height: 500px;
+        min-height: 700px;
     }
 
     .title {

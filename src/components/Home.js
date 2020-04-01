@@ -30,7 +30,9 @@ const Styles = styled.div`
         background-repeat: no-repeat;
         min-height: 570px;
         z-index: -1;
-        border: 1px solid red;
+        border: 1px solid lightgray;
+        border-radius: 1%;
+        margin-top: 10px;
     }
 
     .skill1 {
@@ -49,7 +51,7 @@ const Styles = styled.div`
         flex-direction: column;
         min-height: 570px;
         justify-content: center;
-        padding-left: 75px;
+        padding-left: 356px;
     }
 `;
 
@@ -62,12 +64,12 @@ export const Home = () => (
         <Container className='main'>
         <Row>
             <Col className='skill1'>
-                <h4>David Situ</h4>
-                <p>Full Stack Web Developer</p>
+                <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>Codechiha</h4></a>
+                <p>Join me on my journey to becoming the best full stack web developer I can be</p>
             </Col>
             <Col className='skill2'>
                 <h4>Full-Stack Web Developer</h4>
-                <p>Encompasses Front-end and Back-end web development</p>
+                <p>My studies with Lambda School includes Javascript, Python, and SQL languages</p>
             </Col>
         </Row>
         </Container>
