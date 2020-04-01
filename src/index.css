@@ -1,16 +1,36 @@
+@font-face {
+    font-family: 'arial-bold';
+    src: local('arial-bold'), url(./fonts/ARLRDBD.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'sansation-reg';
+    src: local('sansation-reg'), url(./fonts/Sansation_Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'sansation-light';
+    src: local('sansation-light'), url(./fonts/Sansation_Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'sansation-bold';
+    src: local('sansation-bold'), url(./fonts/Sansation_Bold.ttf) format('truetype');
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'sansation-light';
     background-color: white;
     width: 100%;
 }
 
-h1 { font-family: Helvetica; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 25.3px; } 
+h1 { font-family: 'sansation-bold'; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 25.3px; } 
 
-h3 { font-family: Helvetica; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 18.7px; } p { font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+h3 { font-family: 'sansation-bold'; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 18.7px; } p { font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
 
-h4 { font-size: 15px;}
+h4 { font-family: 'sansation-bold'; font-size: 40px;}
 
 p  { font-size: 11px;}
 

@@ -10,7 +10,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 //Styling
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const github = <FontAwesomeIcon icon={faGithub} />
@@ -18,9 +18,11 @@ const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
+
     .main {
-        min-height: 500px;
-        margin-top
+        min-height: 570px;
+        border: 1px solid red;
+        margin-top: 10px;
     }
 
     .about{

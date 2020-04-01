@@ -39,6 +39,7 @@ const Styles = styled.div`
         // background-position: center;
         // background-repeat: no-repeat;
         // background-size: cover;
+        margin-top: 10px;
     }
 
     .card {
@@ -62,13 +63,17 @@ const Styles = styled.div`
         height: 50%;
     }
 
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-
-    // .description {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    // }
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 `;
 
 
@@ -83,9 +88,11 @@ export const Projects = () => (
                         <p>
                             Recreated the Client's design and incorporated Javascript click event handlers for buttons and menu options. This project was an opportunity to showcase the depth of my understanding of HTML and CSS, while the Javascript event handlers was a stretch goal. This project was built using: <strong>HTML/CSS/JS</strong>
                         </p>
-                        <a href='https://github.com/Codechiha/User-Interface-Project-Week'>{github}</a>
-                        <span>{' | '}</span>
-                        <a href=''>Website</a>
+                        <div className='links'>
+                            <a href='https://github.com/Codechiha/User-Interface-Project-Week'>{github}</a>
+                            <span>{' | '}</span>
+                            <a href=''>Website</a>
+                        </div>
                     </Col>
                     <Col className='img'>
                         <img src={snj} />

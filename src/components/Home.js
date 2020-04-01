@@ -4,7 +4,7 @@ import React from 'react';
 import { Navi } from './Navi';
 
 //Fonts and Images
-import me from '../assets/casual-removed-background.png';
+import me from '../assets/pro-pic-pencils.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -23,33 +23,33 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 // Include an interactive background
 
 const Styles = styled.div`
+
     .main {
         background-image: url(${me});
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
-        min-height: calc(100vh - var(--navbar-height));
+        min-height: 570px;
         z-index: -1;
-        filter: contrast(80%);
-        opacity: 85%;
+        border: 1px solid red;
     }
 
     .skill1 {
         display: flex;
         color: black;
         flex-direction: column;
-        align-items: center;
+        min-height: 570px;
         justify-content: flex-start;
-        padding-top: 50px;
-        min-height: 500px;
+        padding-top: 200px;
+        padding-left: 75px;
     }
 
     .skill2 {
         display: flex;
         color: black;
         flex-direction: column;
-        align-items: center;
+        min-height: 570px;
         justify-content: center;
-        min-height: 500px;
+        padding-left: 75px;
     }
 `;
 
@@ -60,7 +60,7 @@ export const Home = () => (
     <div>
         <Navi />
         <Container className='main'>
-        <Row >
+        <Row>
             <Col className='skill1'>
                 <h4>David Situ</h4>
                 <p>Full Stack Web Developer</p>

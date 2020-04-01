@@ -65,9 +65,9 @@ export const Navi = () => (
                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
                 </div>
                 <div className='social-media'>
-                    <a href='https://github.com/Codechiha'>{github}</a>
-                    <a href='https://www.linkedin.com/in/david-situ-8514977a/'>{linkedin}</a>
-                    <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting'>{contact}</a>
+                    <a href='https://github.com/Codechiha' style={{color: 'white'}}>{github}</a>
+                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' style={{color: 'white'}}>{linkedin}</a>
+                    <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a>
                 </div>
             </div>
         </div>
