@@ -98,7 +98,7 @@ export const Projects = () => (
                         <div className='links'>
                             <a href='https://github.com/Codechiha/User-Interface-Project-Week'>{github}</a>
                             <span>{' | '}</span>
-                            <a href=''>Website</a>
+                            <a href='https://serene-shaw-9adf0c.netlify.com/' target='_blank'>Website</a>
                         </div>
                     </Col>
                     <Col className='img'>
@@ -123,7 +123,7 @@ export const Projects = () => (
                         <div className='links'>
                             <a href='https://github.com/Codechiha/refugee-info'>{github}</a>
                             <span>{' | '}</span>
-                            <a href=''>Website</a>
+                            <a href='https://silly-varahamihira-4fd65b.netlify.com/' target='_blank'>Website</a>
                         </div>
                     </Col>
                     <Col className='img'>
@@ -144,8 +144,9 @@ export const Projects = () => (
                         the card's content.
                         </p>
                         <div className='links'>
-
-
+                            <a href=''>{github}</a>
+                            <span>{' | '}</span>
+                            <a href='' target='_blank'>Website</a>
                         </div>
                     </Col>
                     <Col className='img'>

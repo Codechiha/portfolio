@@ -58,6 +58,19 @@ const Styles = styled.div`
         display: flex;
         flex-direction: row;
     }
+
+    .section {
+        height: 400px;
+        border: 1px solid lightgray;
+        border-radius: 1%;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .three {
+        margin-right: 0;
+    }
 `;
 
 //Change font, add some js functions
@@ -79,9 +92,15 @@ export const Home = () => (
         </Row>
         </Container>
         <Container className='skills'>
-            <Container className=''>column 1</Container>
-            <Container className=''>column 2</Container>
-            <Container className=''>column 3</Container>
+            <Container className='section'>
+                <h5>Frameworks</h5>
+            </Container>
+            <Container className='section'>
+                <h5>Languages</h5>
+            </Container>
+            <Container className='section three'>
+                <h5></h5>
+            </Container>
         </Container>
     </div>
     </Styles>
