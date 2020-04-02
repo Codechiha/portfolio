@@ -19,8 +19,15 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
 
+    h3 {
+        margin-bottom: 40px;
+    }
+
     a {
         color: black;
+        &:hover {
+            color: red;
+        }
     }
 
     .main {

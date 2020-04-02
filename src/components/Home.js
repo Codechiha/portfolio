@@ -53,6 +53,11 @@ const Styles = styled.div`
         justify-content: center;
         padding-left: 356px;
     }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+    }
 `;
 
 //Change font, add some js functions
@@ -72,6 +77,11 @@ export const Home = () => (
                 <p>My studies with Lambda School includes Javascript, Python, and SQL languages</p>
             </Col>
         </Row>
+        </Container>
+        <Container className='skills'>
+            <Container className=''>column 1</Container>
+            <Container className=''>column 2</Container>
+            <Container className=''>column 3</Container>
         </Container>
     </div>
     </Styles>

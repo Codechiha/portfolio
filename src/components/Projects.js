@@ -1,4 +1,6 @@
 import React from 'react';
+import "../../node_modules/video-react/dist/video-react.css";
+import { Player } from 'video-react';
 
 //Components
 import { Navi } from './Navi';
@@ -6,14 +8,14 @@ import { Navi } from './Navi';
 //Fonts and Images
 import bg from '../assets/matrix-rain.jpg';
 import refugeeHome from '../assets/refugeeSC.PNG';
+import refugeeVideo from '../assets/refugee.mp4';
 import snj from '../assets/snj.PNG';
-
-
-
+import snjVideo from '../assets/snj.mp4';
 
 //Styling
 import styled from 'styled-components';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// import "node_modules/video-react/dist/video-react.css";
 
 //Fonts and Images
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -58,21 +60,24 @@ const Styles = styled.div`
         align-items: center;
     }
 
-    img {
-        width: 100%;
-        height: 50%;
-    }
-
     .description {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    .title {
+        margin-bottom: 40px;
+    }
+
     .links {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+
+        a {
+            color: black;
+        }
     }
 `;
 
@@ -84,9 +89,11 @@ export const Projects = () => (
             <Container>
                 <Row className='card'>
                     <Col className='description'>
-                        <h3 className='title'>User Interface Design For the S&#38;J Company</h3>
+                        <h3 className='title'>S&#38;J Company</h3>
                         <p>
-                            Recreated the Client's design and incorporated Javascript click event handlers for buttons and menu options. This project was an opportunity to showcase the depth of my understanding of HTML and CSS, while the Javascript event handlers was a stretch goal. This project was built using: <strong>HTML/CSS/JS</strong>
+                            Recreated the Client's design and incorporated Javascript click event handlers for buttons and menu options. This project was an opportunity to showcase the depth of my understanding of HTML and CSS, while the Javascript event handlers was a stretch goal.</p> 
+                        <p>This project was built using: 
+                            <strong>HTML/CSS/JS</strong>
                         </p>
                         <div className='links'>
                             <a href='https://github.com/Codechiha/User-Interface-Project-Week'>{github}</a>
@@ -95,7 +102,10 @@ export const Projects = () => (
                         </div>
                     </Col>
                     <Col className='img'>
-                        <img src={snj} />
+                        <Player
+                            poster={snj}
+                            src={snjVideo}
+                        />
                     </Col>
                 </Row>
             </Container>
@@ -110,12 +120,18 @@ export const Projects = () => (
 
                             Recently I discovered the front-end stopped rendering, so I am currently developing the front-end.
                         </p>
-                        <a href='https://github.com/Codechiha/refugee-info'>{github}</a>
-                        <span>{' | '}</span>
-                        <a href=''>Website</a>
+                        <div className='links'>
+                            <a href='https://github.com/Codechiha/refugee-info'>{github}</a>
+                            <span>{' | '}</span>
+                            <a href=''>Website</a>
+                        </div>
                     </Col>
                     <Col className='img'>
-                        <img src={refugeeHome} />
+                        <Player 
+                            fluid='false'
+                            poster={refugeeHome}
+                            src={refugeeVideo}
+                        />
                     </Col>
                 </Row>
             </Container>
@@ -127,9 +143,12 @@ export const Projects = () => (
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </p>
-                        <Button variant="primary">Go somewhere</Button>
+                        <div className='links'>
+
+
+                        </div>
                     </Col>
-                    <Col>
+                    <Col className='img'>
                         <img variant="top" src="holder.js/100px180" />
                     </Col>
                 </Row>
