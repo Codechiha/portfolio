@@ -1,12 +1,15 @@
 //Media Queries
-const phoneP = '(max-width: 480px)'; // portrait
-const phoneL = '(max-width: 599px)'; // landscape
-const tabletP = '(max-width: 768px)'; // portrait
-const tabletL = '(max-width: 1199px)'; // landscape
+
+const XS = '(max-width: 600px)'
+const S = '(min-width: 600px)'; 
+const M = '(min-width: 768px)'; 
+const L = '(min-width: 992px)';
+const XL = '(min-width: 1200px)'; 
 
 module.exports = {
-    phoneP,
-    phoneL,
-    tabletP,
-    tabletL
+    XS,
+    S,
+    M,
+    L,
+    XL
 }

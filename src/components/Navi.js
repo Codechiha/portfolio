@@ -1,5 +1,13 @@
 import React from 'react';
 
+import {
+    XS,
+    S,
+    M,
+    L,
+    XL
+} from '../global/global';
+
 //Components
 import { NavLink } from 'react-router-dom';
 
@@ -36,6 +44,8 @@ const Styles = styled.div`
         width: 45%;
         display: flex;
         flex-direction: row;
+
+
     }
 
     .worded {

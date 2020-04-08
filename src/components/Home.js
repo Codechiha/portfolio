@@ -2,10 +2,11 @@ import React from 'react';
 
 //Global Variables
 import {
-    phoneP,
-    phoneL,
-    tabletP,
-    tabletL
+    XS,
+    S,
+    M,
+    L,
+    XL
 } from '../global/global';
 
 //Components
@@ -40,16 +41,16 @@ const Styles = styled.div`
         min-height: 570px;
         border: 1px solid lightgray;
         border-radius: 1%;
+        width: 95%;
         
-        @media ${tabletL} {
-            background-position: top center;
-            padding-top: 500px;
-            z-index: -1;
+        @media ${XS}, ${S}, ${M} {
+            background-image: none;
+            border: none;
         }
     }
 
     .description {
-        @media ${tabletL} {
+        @media ${XS}, ${S}, ${M} {
             display: flex;
             flex-direction: column;
         }
@@ -64,17 +65,29 @@ const Styles = styled.div`
         padding-top: 200px;
         padding-left: 75px;
 
-        @media ${tabletL} {
-            // min-height: 250px;
-            // padding-top: 20px;
-            // padding-left: 20px;
-            // width: 30%;
-            align-items: flex-start;
-            flex-direction: column;
-            width: 45%;
-            padding-top: 50px;
-            min-height: 250px;
-            border: 1px solid red;
+        @media ${XS}, ${S}, ${M} {
+            padding-left: 51px;
+            padding-top: 70px;
+            min-height: 280px;
+            border: 1px solid lightgray;
+            border-radius: 1%;
+            margin-bottom: 71px;
+
+            h4 {
+                font-size: 40px;
+            }
+        }
+
+        @media ${L} {
+            h4 {
+                font-size: 40px;
+            }
+        }
+        
+        @media ${XL} {
+            h4 {
+                font-size: 60px;
+            }
         }
     }
 
@@ -86,13 +99,28 @@ const Styles = styled.div`
         justify-content: center;
         padding-left: 356px;
 
-        @media ${tabletL} {
-            flex-direction: row;
-            min-height: 250px;
-            padding-top: 20px;
-            padding-left: 30px;
-            border: 1px solid blue;
-            // align-items: flex-end;
+        @media ${XS}, ${S}, ${M} {
+            padding-left: 40px;
+            padding-top: 30px;
+            min-height: 303px;
+            border: 1px solid lightgray;
+            border-radius: 1%;
+
+            h4 {
+                font-size: 40px;
+            }
+        }
+
+        @media ${L} {
+            h4 {
+                font-size: 40px;
+            }
+        }
+        
+        @media ${XL} {
+            h4 {
+                font-size: 60px;
+            }
         }
     }
 
