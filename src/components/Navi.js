@@ -23,7 +23,10 @@ const Styles = styled.div`
         justify-content: space-between;
         height: 4em;
         width: 100%;
-        background-color: black;    }
+        background-color: black;
+        margin-bottom: 100px; 
+    }
+
 
     .brand{
         color: white;

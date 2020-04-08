@@ -31,7 +31,7 @@ const Styles = styled.div`
     }
 
     .main {
-        margin-top: 10px;
+        
     }
 
     .row {
