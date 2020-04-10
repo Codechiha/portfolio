@@ -34,18 +34,21 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 const Styles = styled.div`
 
     .main {  
-        z-index: -1;
-        background-image: url(${me});
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        min-height: 570px;
-        border: 1px solid lightgray;
-        border-radius: 1%;
-        width: 95%;
         
-        @media ${XS}, ${S}, ${M} {
+        @media ${XS}, ${S} {
             background-image: none;
             border: none;
+        }
+
+        @media ${L} {
+            z-index: -1;
+            background-image: url(${me});
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            min-height: 570px;
+            border: 1px solid lightgray;
+            border-radius: 1%;
+            width: 95%;
         }
     }
 
@@ -54,17 +57,14 @@ const Styles = styled.div`
             display: flex;
             flex-direction: column;
         }
+
+        @media ${L} {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     .desc1 {
-        display: flex;
-        color: black;
-        flex-direction: column;
-        min-height: 570px;
-        justify-content: flex-start;
-        padding-top: 200px;
-        padding-left: 75px;
-
         @media ${XS}, ${S}, ${M} {
             padding-left: 51px;
             padding-top: 70px;
@@ -79,11 +79,20 @@ const Styles = styled.div`
         }
 
         @media ${L} {
+            display: flex;
+            color: black;
+            flex-direction: column;
+            min-height: 570px;
+            justify-content: flex-start;
+            padding-top: 125px;
+            padding-left: 75px;
+            border: none;
+            
             h4 {
                 font-size: 40px;
             }
         }
-        
+
         @media ${XL} {
             h4 {
                 font-size: 60px;
@@ -92,13 +101,6 @@ const Styles = styled.div`
     }
 
     .desc2 {
-        display: flex;
-        color: black;
-        flex-direction: column;
-        min-height: 570px;
-        justify-content: center;
-        padding-left: 356px;
-
         @media ${XS}, ${S}, ${M} {
             padding-left: 40px;
             padding-top: 30px;
@@ -108,10 +110,18 @@ const Styles = styled.div`
 
             h4 {
                 font-size: 40px;
-            }
+            }     
         }
-
         @media ${L} {
+            display: flex;
+            color: black;
+            flex-direction: column;
+            min-height: 570px;
+            justify-content: flex-start;
+            padding-top: 200px;
+            padding-left: 345px;
+            border: none;
+            
             h4 {
                 font-size: 40px;
             }
@@ -151,7 +161,6 @@ export const Home = () => (
     <div>
         <Navi />
         <Container className='main'>
-            <div className='main-img' />
             <Row className='description'>
                 <Col className='desc1'>
                     <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>{'<Codechiha>'}</h4></a>
