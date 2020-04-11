@@ -2,8 +2,17 @@ import React from 'react';
 import "../../node_modules/video-react/dist/video-react.css";
 import { Player } from 'video-react';
 
+//Global Variables
+import {
+    XS,
+    S,
+    M,
+    L,
+    XL
+} from '../global/global';
+
 //Components
-import { Navi } from './Navi';
+import Navi from './Navi';
 
 //Fonts and Images
 import bg from '../assets/matrix-rain.jpg';
@@ -44,10 +53,21 @@ const Styles = styled.div`
     }
 
     .card {
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        min-height: 700px;
+        // @media ${L} {
+        //     margin: 20px;
+        //     padding: 40px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     min-height: 100%;
+        // }
+
+        @media ${M}, ${L}, ${XL} {
+            margin: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
     }
 
     .title {
@@ -63,6 +83,7 @@ const Styles = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 40px;
     }
 
     .title {

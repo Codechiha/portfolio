@@ -10,7 +10,7 @@ import {
 } from '../global/global';
 
 //Components
-import { Navi } from './Navi';
+import Navi from './Navi';
 
 //Fonts and Images
 import me from '../assets/pro-pic-pencils.png';

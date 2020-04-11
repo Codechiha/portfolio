@@ -32,7 +32,6 @@ const Styles = styled.div`
         height: 4em;
         width: 100%;
         background-color: black;
-        margin-bottom: 100px; 
     }
 
 
@@ -62,24 +61,77 @@ const Styles = styled.div`
         justify-content: space-between;
     }
 
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        background: black;
+        border: 1px solid black;
+        width: 200px;
+    }
+
 `;
 
-export const Navi = () => (
-    <Styles>
-        <div variant="dark" fixed='top' className='navbar'>
-            <NavLink exact to="/" className='brand'><img src={logo} style={{width: '150px'}}/></NavLink>
-            <div className='links'>
-                <div className='worded'>
-                    <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
-                    <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
-                    <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+//Currently state is reading the window size change
+//So include a column menu that is onHide or something that is activated with onClick on the meu
+
+class Navi extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            M: false,
+        }
+        this.updatePredicate = this.updatePredicate.bind(this);
+    }
+
+    componentDidMount() {
+        this.updatePredicate();
+        window.addEventListener('resize', this.updatePredicate);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('resize', this.updatePredicate);
+    }
+
+    updatePredicate() {
+        this.setState({ 
+            M: window.innerWidth < 992 });
+    }
+
+    render(){
+        return(
+            <Styles>
+                <div variant="dark" fixed='top' className='navbar'>
+                    <NavLink exact to="/" className='brand'><img src={logo} style={{width: '150px'}}/></NavLink>
+                    <div className='links'>
+                        <div className='worded'>
+                            <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
+                            <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
+                            <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+                        </div>
+                        <div className='social-media'>
+                            <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
+                            <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
+                            <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a> 
+                        </div>
+                    </div>
                 </div>
-                <div className='social-media'>
-                    <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
-                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
-                    <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a>
+                <div>
+                    {this.state.M ? 
+                        (<div className='dropdown'>
+                            <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
+                            <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
+                            <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+                            <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
+                            <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
+                            <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a> 
+                        </div>) : 
+                        (null)
+                    }
                 </div>
-            </div>
-        </div>
-    </Styles>
-)
+                {console.log(document.body.clientWidth, 'width')}
+            </Styles>
+        )
+    }
+}
+
+export default Navi;
