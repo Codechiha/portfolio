@@ -30,10 +30,6 @@ const Styles = styled.div`
         }
     }
 
-    .main {
-        
-    }
-
     .row {
         margin-bottom: 20px;
         display: flex;

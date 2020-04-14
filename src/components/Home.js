@@ -33,6 +33,13 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
 
+    a {
+        color: black;
+        &:hover {
+            color: red;
+        }
+    }
+
     .main {  
         
         @media ${XS}, ${S} {
@@ -41,7 +48,6 @@ const Styles = styled.div`
         }
 
         @media ${L} {
-            z-index: -1;
             background-image: url(${me});
             background-position: center bottom;
             background-repeat: no-repeat;

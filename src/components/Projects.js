@@ -53,15 +53,8 @@ const Styles = styled.div`
     }
 
     .card {
-        // @media ${L} {
-        //     margin: 20px;
-        //     padding: 40px;
-        //     display: flex;
-        //     flex-direction: column;
-        //     min-height: 100%;
-        // }
 
-        @media ${M}, ${L}, ${XL} {
+        @media ${XS}, ${S}, ${M}, ${L}, ${XL} {
             margin: 20px;
             padding: 40px;
             display: flex;
@@ -70,8 +63,17 @@ const Styles = styled.div`
         }
     }
 
+    a {
+        color: black;
+        &:hover {
+            color: red;
+        }
+    }
+
     .title {
         font-weight: bold;
+        margin-bottom: 40px;
+        height: 100%;
     }    
     
     .img {
@@ -86,9 +88,6 @@ const Styles = styled.div`
         margin-bottom: 40px;
     }
 
-    .title {
-        margin-bottom: 40px;
-    }
 
     .links {
         display: flex;
@@ -132,7 +131,7 @@ export const Projects = () => (
             <Container>
                 <Row className='card'>
                     <Col className='description'>
-                        <h3 className='title'>Refugee Awareness</h3>
+                        <h3 className='title' style={{lineHeight: '36.5px'}}>Refugee Awareness</h3>
                         <p>
                             This was a team project consisting of 4 team members. The roles included: front-end, back-end, User Interface, and scrum leader. My role was the backend, which I created using the React framework, JSX language, utilizing Knex.js library and SQLite 3 as my Database Manager. I created the Stories Database in order to persist the stories shared by the users. A Users Database was created to allow users to log-in to share stories. Password security was programmed using JSON Web Token and bcrypt React libraries to ensure our users' login information was encrypted while persisting in our Database.
 

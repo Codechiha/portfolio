@@ -19,6 +19,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 //Styling
 import styled from 'styled-components';
+import { Dropdown, DropdownButton, DropdownItem, ButtonGroup } from 'react-bootstrap';
 
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
@@ -26,12 +27,20 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
 
+    a {
+        color: black;
+        &:hover {
+            color: red;
+        }
+    }
+
     .navbar{
         flex-flow: row;
         justify-content: space-between;
         height: 4em;
         width: 100%;
         background-color: black;
+        margin-bottom: 20px;
     }
 
 
@@ -62,11 +71,8 @@ const Styles = styled.div`
     }
 
     .dropdown {
-        display: flex;
-        flex-direction: column;
-        background: black;
-        border: 1px solid black;
-        width: 200px;
+        color: white;
+        align-items: center;
     }
 
 `;
@@ -102,32 +108,32 @@ class Navi extends React.Component {
             <Styles>
                 <div variant="dark" fixed='top' className='navbar'>
                     <NavLink exact to="/" className='brand'><img src={logo} style={{width: '150px'}}/></NavLink>
-                    <div className='links'>
-                        <div className='worded'>
-                            <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
-                            <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
-                            <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
-                        </div>
-                        <div className='social-media'>
-                            <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
-                            <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
-                            <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a> 
-                        </div>
-                    </div>
+                        {this.state.M 
+                            ? 
+                            (<DropdownButton drop='left' title="Menu" variant='dark' as={ButtonGroup}>
+                                <Dropdown.Item><NavLink to="/about">About</NavLink></Dropdown.Item>
+                                <Dropdown.Item><NavLink to="/projects">Projects</NavLink></Dropdown.Item>
+                                <Dropdown.Item href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank">Resume</Dropdown.Item>
+                                <Dropdown.Item href='https://github.com/Codechiha' target="_blank">{github}</Dropdown.Item>
+                                <Dropdown.Item href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank">{linkedin}</Dropdown.Item>
+                                <Dropdown.Item href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting'>{contact}</Dropdown.Item>
+                            </DropdownButton>) 
+                            : 
+                            (<div className='links'>
+                                <div className='worded'>
+                                    <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
+                                    <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
+                                    <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+                                </div>
+                                <div className='social-media'>
+                                    <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
+                                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
+                                    <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a> 
+                                </div>
+                            </div>)
+                        }
                 </div>
-                <div>
-                    {this.state.M ? 
-                        (<div className='dropdown'>
-                            <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
-                            <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
-                            <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
-                            <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>
-                            <a href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank" style={{color: 'white'}}>{linkedin}</a>
-                            <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: 'white'}}>{contact}</a> 
-                        </div>) : 
-                        (null)
-                    }
-                </div>
+                
                 {console.log(document.body.clientWidth, 'width')}
             </Styles>
         )
