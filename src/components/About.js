@@ -1,5 +1,13 @@
 import React from 'react';
 
+import {
+    XS,
+    S,
+    M,
+    L,
+    XL
+} from '../global/global';
+
 //Components
 import Navi from './Navi';
 
@@ -31,26 +39,58 @@ const Styles = styled.div`
     }
 
     .row {
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        min-height: 600px;
-        align-items: center;
-        justify-content: space-between;
-        border: 1px solid lightgray;
-        border-radius: 1%;
+        @media ${XS}, ${S}, ${M}  {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media ${L}, ${XL}{
+            display: flex;
+            flex-direction: row;
+            min-height: 600px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid lightgray;
+            border-radius: 1%;
+        }
+        
     }
 
     .about{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @media ${XS}, ${S}, ${M} {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid lightgray;
+            border-radius: 1%;
+        }
+        
+        @media ${L}, ${XL} {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            
+        }
     }
 
     .links {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .pic {
+        @media ${XS}, ${S}, ${M} {
+            border: 1px solid lightgray;
+            border-radius: 1%;
+            padding: 20px;
+        }
+
+        @media ${L} {
+            border: none;
+        }
     }
 `
 export const About = () => (

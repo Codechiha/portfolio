@@ -45,6 +45,7 @@ const Styles = styled.div`
         @media ${XS}, ${S} {
             background-image: none;
             border: none;
+            width: 95%;
         }
 
         @media ${L} {
