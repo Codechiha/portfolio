@@ -175,7 +175,7 @@ export const Home = () => (
                 </Col>
                 <Col className='desc2'>
                     <h4>Full-Stack Web Developer</h4>
-                    <p>My studies with Lambda School includes Javascript, Python, and SQL languages</p>
+                    <p>My studies with Lambda School included Javascript, Python, and SQL languages</p>
                 </Col>
             </Row>
             

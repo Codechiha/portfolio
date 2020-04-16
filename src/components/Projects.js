@@ -154,7 +154,7 @@ export const Projects = () => (
                     </Col>
                 </Row>
             </Container>
-            <Container>
+            {/* <Container>
                 <Row className='card'>
                     <Col className='description'>
                         <h3 className='title'>Project 3</h3>
@@ -172,7 +172,7 @@ export const Projects = () => (
                         <img variant="top" src="holder.js/100px180" />
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
         </Container>
     </Styles>
 )
