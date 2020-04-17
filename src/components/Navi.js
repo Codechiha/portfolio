@@ -122,8 +122,8 @@ class Navi extends React.Component {
                             (<div className='links'>
                                 <div className='worded'>
                                     <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
-                                    <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
                                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+                                    <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
                                 </div>
                                 <div className='social-media'>
                                     <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>

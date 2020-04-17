@@ -170,12 +170,12 @@ export const Home = () => (
         <Container className='main'>
             <Row className='description'>
                 <Col className='desc1'>
-                    <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>{'<Codechiha>'}</h4></a>
-                    <p>Join me on my journey to becoming the best full stack web developer I can be</p>
+                    <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>{'Problem Solver'}</h4></a>
+                    <p>I want to make a difference in the world through the world wide web, Solving one problem at a time</p>
                 </Col>
                 <Col className='desc2'>
                     <h4>Full-Stack Web Developer</h4>
-                    <p>My studies with Lambda School included Javascript, Python, and SQL languages</p>
+                    <p>My current toolbelt is filled with Javascript, Python, React, HTML, CSS. Help me add more tools so we can solve more problems Together</p>
                 </Col>
             </Row>
             
