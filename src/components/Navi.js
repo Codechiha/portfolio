@@ -113,7 +113,7 @@ class Navi extends React.Component {
                             (<DropdownButton drop='left' title="Menu" variant='dark' as={ButtonGroup}>
                                 <Dropdown.Item><NavLink to="/about">About</NavLink></Dropdown.Item>
                                 <Dropdown.Item><NavLink to="/projects">Projects</NavLink></Dropdown.Item>
-                                <Dropdown.Item href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank">Resume</Dropdown.Item>
+                                <Dropdown.Item><NavLink to="/resume">Resume</NavLink></Dropdown.Item>
                                 <Dropdown.Item href='https://github.com/Codechiha' target="_blank">{github}</Dropdown.Item>
                                 <Dropdown.Item href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank">{linkedin}</Dropdown.Item>
                                 <Dropdown.Item href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting'>{contact}</Dropdown.Item>
@@ -123,6 +123,7 @@ class Navi extends React.Component {
                                 <div className='worded'>
                                     <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
                                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
+                                    <NavLink to="/resume" style={{color: 'white'}}>Resume React</NavLink>
                                     <a href='https://resume.creddle.io/resume/gqg7n9l0lsi' target="_blank" style={{color: 'white'}}>Resume</a>
                                 </div>
                                 <div className='social-media'>

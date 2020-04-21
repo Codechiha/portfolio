@@ -20,8 +20,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 //Styling
 import styled from 'styled-components';
-
-
 import { Container, Row, Col } from 'react-bootstrap';
 
 const github = <FontAwesomeIcon icon={faGithub} />
@@ -29,8 +27,6 @@ const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 // This is the Home Page
-// Include an interactive background
-
 const Styles = styled.div`
 
     a {
@@ -152,7 +148,6 @@ const Styles = styled.div`
         border-radius: 1%;
         width: 30%;
         margin-top: 10px;
-        // margin-right: 10px;
         margin-bottom: 10px;
     }
 
@@ -165,35 +160,22 @@ const Styles = styled.div`
 
 export const Home = () => (
     <Styles>
-    <div>
-        <Navi />
-        <Container className='main'>
-            <Row className='description'>
-                <Col className='desc1'>
-                    <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>{'Problem Solver'}</h4></a>
-                    <p>I want to make a difference in the world through the world wide web, Solving one problem at a time</p>
-                </Col>
-                <Col className='desc2'>
-                    <h4>Full-Stack Web Developer</h4>
-                    <p>My current toolbelt is filled with Javascript, Python, React, HTML, CSS. Help me add more tools so we can solve more problems Together</p>
-                </Col>
-            </Row>
-            
-        </Container>
-        {/* <Container className='skills'>
-            <Container className='section'>
-                <h5>Front End</h5>
-                    <p>HTML/CSS</p>
-                    <p>Javascript</p>
-                    <p>React</p>
+        <div>
+            <Navi />
+            <Container className='main'>
+                <Row className='description'>
+                    <Col className='desc1'>
+                        <a href='https://github.com/Codechiha' style={{color: 'black'}}><h4>{'Problem Solver'}</h4></a>
+                        <p>Changing the world by solving one problem at a time</p>
+                    </Col>
+                    <Col className='desc2'>
+                        <h4>Full-Stack Web Developer</h4>
+                        <p>My toolbelt is filled with Javascript, Python, React, HTML, CSS. Help me add more tools so we can solve more problems Together</p>
+                    </Col>
+                </Row>
+                
             </Container>
-            <Container className='section'>
-                <h5>Back End Capabilities</h5>
-                    <p>Python</p>
-                    <p>SQL</p>
-            </Container>
-        </Container> */}
-    </div>
+        </div>
     </Styles>
 )
 
