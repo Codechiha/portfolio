@@ -29,17 +29,22 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 // This is the Home Page
 const Styles = styled.div`
 
-    h7 {font-size: 50px; font-weight: bold;}
+    h5 {font-size: 26px; font-weight: bold; font-family: sansation-bold;}
+    h3 {font-size: 55px; margin-bottom: 20px;}
+    p {margin: 0; font-size: 19px;}
+    li {font-family: sansation-regular; font-size: 17px;}
 
     .main {
         border: 1px solid black;
+        box-shadow: 3px 3px 0 0 darkgray;
         padding: 20px;
+        margin-bottom: 20px;
     }
     .row {}
-    .col1 {width: 30%;}
-    .col2 {width: 60%;}
+    .col1 {}
+    .col2 {}
 
-    .header {}
+    .header {padding: 10px;}
     .section-headers {
         font-size: 24px; 
         background-color: #26447f; 
@@ -56,9 +61,9 @@ const Styles = styled.div`
         margin-top: 20px;
     }
 
-    .contact {margin: 40px 0;}
+    .contact {margin: 22px 0; line-height: 4;}
     .skills {}
-    .title-sections {}
+    .title-sections {display: flex; flex-direction: row; justify-content: space-between; margin-top: 16px;}
     .titles {}
     .sub-titles {}
     .dates {}
@@ -73,9 +78,9 @@ export const Resume = () => (
             <Navi />
             <Container className='main'>
                 <Row className='row'>
-                    <Col className='col1'>
+                    <Col className='col1' lg={4}>
                         <div className='header'>
-                            <h7>David Situ</h7>
+                            <h3>David Situ</h3>
                             <h5>Full Stack Web Developer</h5>
                         </div>
                         <div className='contact'>
@@ -100,7 +105,6 @@ export const Resume = () => (
                                 <li className='skills'>Node</li>
                                 <li className='skills'>Knex</li>
                                 <li className='skills'>React-Bootstrap</li>
-                                <li className='skills'></li>
                             </ul>
                             <h6 className='section-sub-headers'>Databases</h6>
                             <ul>
@@ -121,12 +125,25 @@ export const Resume = () => (
                                 <a><h5 className='titles'>Refugee Awareness</h5></a>
                                 <p>Jan. 2019 - Feb. 2019</p>
                             </div>
-                            <p></p>
+                            <p>
+                                This is a group project website that educates users about refugees and allows users to share refugee stories 
+                            </p>
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li>Built backend using React, JSX and knex</li>
+                                <li>Rebuilt the frontend in March 2020 using React and JSX</li>
                             </ul>
                             <div className ='title-sections'>
+                                <a><h5 className='titles'>S and J Architecture</h5></a>
+                                <p>Nov. 2018 - Nov 2018</p>
+                            </div>
+                            <p>
+                                This is a personal project website that aimed to imitate the design images of S and J Architecture
+                            </p>
+                            <ul>
+                                <li>Content and designs are rendered using HTML/CSS</li>
+                                <li>Button and Menu event handlers are built using Javascript</li>
+                            </ul>
+                            {/* <div className ='title-sections'>
                                 <a><h5 className='titles'>Refugee Awareness</h5></a>
                                 <p>Jan. 2019 - Feb. 2019</p>
                             </div>
@@ -134,17 +151,7 @@ export const Resume = () => (
                             <ul>
                                 <li></li>
                                 <li></li>
-                                <li></li>
-                            </ul>
-                            <div className ='title-sections'>
-                                <a><h5 className='titles'>Refugee Awareness</h5></a>
-                                <p>Jan. 2019 - Feb. 2019</p>
-                            </div>
-                            <p></p>
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            </ul> */}
                         </div>
                         <div className='employment'>
                             <h3 className='section-headers'>Employment</h3>
@@ -159,8 +166,15 @@ export const Resume = () => (
                                 </div>  
                             </div>
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li>
+                                    Assigned customers to nail technicians according to services 
+                                </li>
+                                <li>
+                                    Managed payments and tips
+                                </li>
+                                <li>
+                                    Organized calendars to accommodate 50 - 100 customers per day
+                                </li>
                             </ul>
                             <div className ='title-sections'>
                                 <div className='employment-titles'>
@@ -173,20 +187,27 @@ export const Resume = () => (
                                 </div>  
                             </div>
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li>
+                                    Assisted in surveying the psycho-social statuses of 20 elderly men and women per day
+                                </li>
+                                <li>
+                                    Spoke primarily in Cantonese and Mandarin
+                                </li>
+                                <li>
+                                    Supported the clients in any language barrier tasks requested, such as: paying bills, making phone calls, signing up for healthcare
+                                </li> 
                             </ul>
                         </div>
                         <div className='education'>
                             <h3 className='section-headers'>Education</h3>
                             <div className='title-sections'>
-                                <a><h5 className='titles'></h5></a>
-                                <p></p>
+                                <a><h5 className='titles'>Lambda School</h5></a>
+                                <p>Oct. 2018 - Current</p>
                             </div>
                             <p>Completion of Full-Stack Web Development 2020</p>
                             <div className='title-sections'>
-                                <a><h5 className='titles'></h5></a>
-                                <p></p>
+                                <a><h5 className='titles'>CSU, Los Angeles</h5></a>
+                                <p>Sept. 2014 - June 2016</p>
                             </div>
                             <p>B.A. Psychology 2016</p>
                             <p>Honors: Dean's List and Summ Cum Laude</p>
