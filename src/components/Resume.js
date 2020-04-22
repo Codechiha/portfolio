@@ -37,7 +37,7 @@ const Styles = styled.div`
     .main {
         border: 1px solid black;
         box-shadow: 3px 3px 0 0 darkgray;
-        padding: 20px;
+        padding: 35px;
         margin-bottom: 20px;
     }
     .row {}
