@@ -28,7 +28,7 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 // This is the Home Page
 const Styles = styled.div`
-
+    a {color: black;}
     h5 {font-size: 26px; font-weight: bold; font-family: sansation-bold;}
     h3 {font-size: 55px; margin-bottom: 20px;}
     p {margin: 0; font-size: 19px;}
@@ -116,13 +116,18 @@ export const Resume = () => (
                                 <li className='skills'>VS Code</li>
                                 <li className='skills'>Git Bash</li>
                             </ul>
+                            <h6 className='section-sub-headers'>Spoken Languages</h6>
+                            <ul>
+                                <li className='skills'>Cantonese</li>
+                                <li className='skills'>Mandarin</li>
+                            </ul>
                         </div>
                     </Col>
                     <Col className='col2'>
                         <div className='projects'>
                             <h3 className='section-headers'>Projects</h3>
                             <div className ='title-sections'>
-                                <a><h5 className='titles'>Refugee Awareness</h5></a>
+                                <a href='https://silly-varahamihira-4fd65b.netlify.com/#/' target='_blank'><h5 className='titles'>Refugee Awareness</h5></a>
                                 <p>Jan. 2019 - Feb. 2019</p>
                             </div>
                             <p>
@@ -133,8 +138,8 @@ export const Resume = () => (
                                 <li>Rebuilt the frontend in March 2020 using React and JSX</li>
                             </ul>
                             <div className ='title-sections'>
-                                <a><h5 className='titles'>S and J Architecture</h5></a>
-                                <p>Nov. 2018 - Nov 2018</p>
+                                <a href='https://serene-shaw-9adf0c.netlify.com/index.html' target='_blank'><h5 className='titles'>S and J Architecture</h5></a>
+                                <p>Nov. 2018 - Nov. 2018</p>
                             </div>
                             <p>
                                 This is a personal project website that aimed to imitate the design images of S and J Architecture
@@ -157,7 +162,7 @@ export const Resume = () => (
                             <h3 className='section-headers'>Employment</h3>
                             <div className ='title-sections'>
                                 <div className='employment-titles'>
-                                    <a><h5 className='titles'>Wynn Nail Spa</h5></a>
+                                    <a href='http://www.wynnnailspa.com/' target='_blank'><h5 className='titles'>Wynn Nail Spa</h5></a>
                                     <p className='sub-titles'>Customer / Schedule Manager</p>
                                 </div>
                                 <div className='employment-titles'>
@@ -178,7 +183,7 @@ export const Resume = () => (
                             </ul>
                             <div className ='title-sections'>
                                 <div className='employment-titles'>
-                                    <a><h5 className='titles'>Emerald Health Services</h5></a>
+                                    <a href='http://www.calqualitycare.org/provider/?id=060002049&n=Emerald+Health+Services' target='_blank'><h5 className='titles'>Emerald Health Services</h5></a>
                                     <p className='sub-titles'>Social Worker Assistant</p>
                                 </div>
                                 <div className='employment-titles'>
@@ -201,12 +206,12 @@ export const Resume = () => (
                         <div className='education'>
                             <h3 className='section-headers'>Education</h3>
                             <div className='title-sections'>
-                                <a><h5 className='titles'>Lambda School</h5></a>
+                                <a href='https://dashboards.lambdaschool.com/students/rec7rRpGbFi3aS3ti' target='_blank'><h5 className='titles'>Lambda School</h5></a>
                                 <p>Oct. 2018 - Current</p>
                             </div>
                             <p>Completion of Full-Stack Web Development 2020</p>
                             <div className='title-sections'>
-                                <a><h5 className='titles'>CSU, Los Angeles</h5></a>
+                                <a href='http://www.calstatela.edu/' target='_blank'><h5 className='titles'>CSU, Los Angeles</h5></a>
                                 <p>Sept. 2014 - June 2016</p>
                             </div>
                             <p>B.A. Psychology 2016</p>

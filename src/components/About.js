@@ -13,17 +13,30 @@ import Navi from './Navi';
 
 //Fonts and Images
 import me from '../assets/professional-picture.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import spring07 from '../assets/spring07-undefeated.jpg';
+import summer07 from '../assets/summer-07-champs.jpg';
+import spring08 from '../assets/spring08-champs.jpg';
+import hoodie from '../assets/gudetama-hoodie.jpg';
+import tar from '../assets/house-t.JPG';
+import rainbow from '../assets/rainbow-dragon.JPG';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 //Styling
+import AwesomeSlider from 'react-awesome-slider';
+import CoreStyles from 'react-awesome-slider/src/core/styles.scss'
+import AnimationStyles from 'react-awesome-slider/src/styled/fall-animation/fall-animation.scss';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const github = <FontAwesomeIcon icon={faGithub} />
 const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 const contact = <FontAwesomeIcon icon={faEnvelope} />
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Styles = styled.div`
 
@@ -59,9 +72,10 @@ const Styles = styled.div`
     }
 
     .about{
+
         @media ${XS}, ${S}, ${M} {
             margin-bottom: 20px;
-            padding: 20px;
+            padding: 63px;
             border: 1px solid lightgray;
             border-radius: 1%;
         }
@@ -70,6 +84,7 @@ const Styles = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 20px;
             border: none;
             
         }
@@ -102,10 +117,9 @@ export const About = () => (
                     <Col className='about'>
                         <h3>David Situ</h3>
                         <p>A survivor of the vigorous Full-Stack Web Development program at Lambda School. 
-                            The intensive course teaches Front-end including HTML, CSS, Javascript, and React. 
-                            Back-end includes Python, API, Hashing, Blockchain, Testing, and Computer Architecture. 
-                            Also included in my toolbelt is a B.A in Psychology, 
-                            which comes with abilities of the scientific method, observation, data analysis, and detailed communication.</p>
+                            The intensive course teaches User-Interface (HTML, CSS, Javascript), Front-end (React, State Management, JSX), and
+                            Back-end (Python, RESTful API, Hashing, Blockchain, and Computer Architecture).</p>
+                            <p> When I'm not changing the world with my amazing websites, I make vinyl graphic T-shirts, play basketball, and develop theories about the fantasy world of One Piece. </p>
                         <div className='links'>
                             <a href='https://resume.creddle.io/resume/gqg7n9l0lsi'>Resume</a>
                             <span>{' | '}</span>
@@ -117,8 +131,19 @@ export const About = () => (
                         </div>
                         
                     </Col>
-                    <Col className='pic'>
+                    {/* <Col className='pic'>
                         <img src={me} style={{width: '100%', height: '400px'}} />
+                    </Col> */}
+                    <Col className='about'>
+                    <AutoplaySlider style={{height: '500px'}} play={true} cancelOnInteraction={false} interval={3000} animation='fallAnimation' cssModule={[CoreStyles, AnimationStyles]}>
+                        <div data-src={me} />
+                        <div data-src={spring07} />
+                        <div data-src={summer07} />
+                        <div data-src={spring08} />
+                        <div data-src={hoodie} />
+                        <div data-src={tar} />
+                        <div data-src={rainbow} />
+                    </AutoplaySlider>
                     </Col>
                 </Row>
             </Container>

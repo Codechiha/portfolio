@@ -15,7 +15,6 @@ import {
 import Navi from './Navi';
 
 //Fonts and Images
-import bg from '../assets/matrix-rain.jpg';
 import refugeeHome from '../assets/refugeeSC.PNG';
 import refugeeVideo from '../assets/refugee.mp4';
 import snj from '../assets/snj.PNG';
@@ -45,12 +44,6 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 // Next Component should be a Contacts Section with Forms
 
 const Styles = styled.div`
-    .main {
-        // background-image: url(${bg});
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-    }
 
     .card {
 
