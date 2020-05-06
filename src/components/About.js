@@ -29,7 +29,7 @@ import CoreStyles from 'react-awesome-slider/src/core/styles.scss'
 import AnimationStyles from 'react-awesome-slider/src/styled/fall-animation/fall-animation.scss';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ProgressBar } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const github = <FontAwesomeIcon icon={faGithub} />
@@ -155,13 +155,21 @@ const Styles = styled.div`
         
     }
 
+    ProgressBar {
+        height: 50px;
+        width: 600px;
+    }
+
     .subtitle {
         font-size: 40px;
         font-weight: bold;
         margin-top: 40px;
-        padding-bottom: 40px;
+        margin-right: 856px;
+        margin-bottom: 20px;
+        justify-content: left;
+        padding-bottom: 5px;
         padding-left: 40px;
-        border-bottom: 1px solid black;
+        border-bottom: 3px solid black;
     }
 `
 
@@ -171,6 +179,12 @@ export const About = () => (
             <div className='subtitle'>
                 Capabilities
             </div>
+            <Container>
+                <div>
+                    <p className='skill'>React</p>
+                    
+                </div>
+            </Container>
         </div>
     </Styles>
 )

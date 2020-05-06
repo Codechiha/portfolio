@@ -13,6 +13,7 @@ import {
 import Navi from './Navi';
 
 //Fonts and Images
+import logo from '../assets/dslogowhite2.png';
 import me from '../assets/pro-pic-pencils.png';
 import typing from '../assets/typing.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -191,6 +192,12 @@ const Styles = styled.div`
         height: 100vh;
     }
 
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .intro {
         color: white;
         font-weight: bold;
@@ -211,7 +218,7 @@ const Styles = styled.div`
 export const Home = () => (
     <Styles>
         <div className='main'>
-            <p>image</p>
+            <img className='logo' src={logo} />
             <h2 className='intro'>
                 David Situ, Full Stack Web Developer
             </h2>
