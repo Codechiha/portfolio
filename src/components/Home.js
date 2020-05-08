@@ -26,9 +26,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import {NavLink} from 'react-router-dom';
 
-const github = <FontAwesomeIcon icon={faGithub} />
-const linkedin = <FontAwesomeIcon icon={faLinkedin} />
-const contact = <FontAwesomeIcon icon={faEnvelope} />
+
 
 // This is the Home Page
 // const Styles = styled.div`
@@ -182,7 +180,9 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 //         </div>
 //     </Styles>
 // )
-
+const github = <FontAwesomeIcon icon={faGithub} className='fa-3x'/>
+const linkedin = <FontAwesomeIcon icon={faLinkedin} className='fa-3x'/>
+const contact = <FontAwesomeIcon icon={faEnvelope} className='fa-3x'/>
 
 
 const Styles = styled.div`
@@ -200,13 +200,24 @@ const Styles = styled.div`
         font-size: 20px;
         font-weight: bold;
         margin: 20px 55px;
-        border: 2px solid lightgray;
+        border: 1px solid lightgray;
         background-color: #8a2019;
-        color: #e3e1da;
-        box-shadow: 5px 5px black;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+        outline: 1px solid;
+        outline-color: rgba(255, 255, 255, 0.5);
+        outline-offset: 0px;
+        text-shadow: none;
+        transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+        letter-spacing: 4px;
+        position: relative;
 
         &:hover {
             background-color: black;
+            text-decoration: none;
+            border: 1px solid lightgray;
+            outline-color: rgba(255, 255, 255, 0);
+            outline-offset: 15px;
+            text-shadow: 2px 2px 2px #427388;
         }
     }
 
@@ -232,8 +243,13 @@ const Styles = styled.div`
         border-bottom: 1px solid white;
         margin-right: 67px;
         margin-left: 67px;
+        margin-bottom: 40px;
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .intro-p {
+        margin-bottom: 40px;
     }
 
     .next {
@@ -244,24 +260,41 @@ const Styles = styled.div`
         text-align: center;
     }
 
-    .buttons {
+    .links {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        
+        a {
+            margin-right: 25px;
+            margin-left: 25px;
 
+            &:hover {
+            }
+        }
     }
 `
 
 export const Home = () => (
     <Styles>
         <div className='main'>
-            <Navi />
             <img className='logo' src={logo} />
             <h2 className='intro'>
                 Full Stack Web Developer
             </h2>
-            <p>Bringing your website to reality with my keyboard</p>
+            <p className='intro-p'>Bringing your website to reality with my keyboard</p>
             <div className='next'>
                 <div className='buttons'>
-                    <button className='button'>My Projects</button>
-                    <button className='button'>Hire Me</button>
+                    <button className='button'>
+                        <NavLink to="/projects" style={{color: '#e3e1da'}}>Projects</NavLink>
+                    </button>
+                    <button className='button'>
+                        <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: '#e3e1da'}}>Contact</a>
+                    </button>
+                </div>
+                <div className='links'>
+                    <a href='https://github.com/Codechiha' className='link' target="_blank" style={{color: '#969389'}}>{github}</a>
+                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' className='link' target="_blank" style={{color: '#969389'}}>{linkedin}</a>
                 </div>
             </div>
         </div>

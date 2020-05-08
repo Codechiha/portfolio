@@ -14,33 +14,22 @@ import Contact from './components/Contact';
 
 // This Component Compiles all the separate components
 
-// class App extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <Route exact path='/' 
-//                     render= {props => <Home  {...props} />}
-//                 />
-//                 <Route path='/projects' 
-//                     render= {props => <Projects  {...props} />}
-//                 />
-//                 <Route path='/about' 
-//                     render= {props => <About  {...props} />}
-//                 />
-//                 <Route path='/resume' 
-//                     render = {props => <Resume {...props} />}
-//                 />
-//             </div>
-//         )
-//     }
-// }
-
 class App extends Component {
     render() {
         return (
             <div>
-                <Home />
-                <About />
+                <Route exact path='/' 
+                    render= {props => <Home  {...props} />}
+                />
+                <Route path='/projects' 
+                    render= {props => <Projects  {...props} />}
+                />
+                <Route path='/about' 
+                    render= {props => <About  {...props} />}
+                />
+                <Route path='/resume' 
+                    render = {props => <Resume {...props} />}
+                />
             </div>
         )
     }

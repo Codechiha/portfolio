@@ -7,6 +7,7 @@ import './fonts/ARLRDBD.ttf'
 
 
   ReactDOM.render(
-        <App />,
-      document.getElementById('root')
+    <Router>
+      <App />
+    </Router>, document.getElementById('root')
   );
