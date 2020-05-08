@@ -151,6 +151,12 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 //     </div>
 // )
 const Styles = styled.div`
+
+    h1 {
+        padding: 20px;
+        font-size: 30px;
+        border-bottom: 2px solid black;
+    }
     .main {
         
     }
@@ -171,6 +177,25 @@ const Styles = styled.div`
         padding-left: 40px;
         border-bottom: 3px solid black;
     }
+
+    .capable {
+        border: 1px solid lightgray;
+        border-radius: 10%;
+        margin-right: 50px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .st {
+        margin-right: 0;
+    }
+    .skills {
+        font-size: 27px;
+        line-height: 3;
+        font-weight: bold;
+    }
+
+
 `
 
 export const About = () => (
@@ -180,10 +205,40 @@ export const About = () => (
                 Capabilities
             </div>
             <Container>
-                <div>
-                    <p className='skill'>React</p>
-                    
-                </div>
+                <Row>
+                    <Col className='capable'>
+                        <h1>
+                            Languages
+                        </h1>
+                        <ul style={{listStyle: 'none'}}>
+                            <li className='skills'>HTML</li>
+                            <li className='skills'>CSS</li>
+                            <li className='skills'>Javascript</li>
+                            <li className='skills'>Python</li>
+                            <li className='skills'>SQL</li>
+                        </ul>
+                    </Col>
+                    <Col className='capable'>
+                        <h1>
+                            Frameworks
+                        </h1>
+                        <ul style={{listStyle: 'none'}}>
+                            <li className='skills'>React</li>
+                            <li className='skills'>Node</li>
+                            <li className='skills'>Knex</li>
+                        </ul>
+                    </Col>
+                    <Col className='capable st'>
+                        <h1>
+                            Software Tools
+                        </h1>
+                        <ul style={{listStyle: 'none'}}>
+                            <li className='skills'>SQLite</li>
+                            <li className='skills'>PostGres</li>
+                            <li className='skills'>Git</li>
+                        </ul>
+                    </Col>
+                </Row>
             </Container>
         </div>
     </Styles>

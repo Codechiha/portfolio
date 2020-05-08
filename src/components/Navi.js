@@ -12,7 +12,7 @@ import {
 import { NavLink } from 'react-router-dom';
 
 //Fonts and Images
-import logo from '../assets/dslogowhite.png';
+import logo from '../assets/dslogowhite2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -39,7 +39,7 @@ const Styles = styled.div`
         justify-content: space-between;
         height: 4em;
         width: 100%;
-        background-color: black;
+        background-color: rgba(0,0,0,0.001);
         margin-bottom: 20px;
     }
 
@@ -107,13 +107,14 @@ class Navi extends React.Component {
         return(
             <Styles>
                 <div variant="dark" fixed='top' className='navbar'>
-                    <NavLink exact to="/" className='brand'><img src={logo} style={{width: '150px'}}/></NavLink>
+                    <img src={logo} style={{width: '150px'}}/>  
+                    {/* <NavLink exact to="/" className='brand'><img src={logo} style={{width: '150px'}}/></NavLink> */}
                         {this.state.M 
                             ? 
                             (<DropdownButton drop='left' title="Menu" variant='dark' as={ButtonGroup}>
-                                <Dropdown.Item><NavLink to="/about">About</NavLink></Dropdown.Item>
+                                {/* <Dropdown.Item><NavLink to="/about">About</NavLink></Dropdown.Item>
                                 <Dropdown.Item><NavLink to="/projects">Projects</NavLink></Dropdown.Item>
-                                <Dropdown.Item><NavLink to="/resume">Resume</NavLink></Dropdown.Item>
+                                <Dropdown.Item><NavLink to="/resume">Resume</NavLink></Dropdown.Item> */}
                                 <Dropdown.Item href='https://github.com/Codechiha' target="_blank">{github}</Dropdown.Item>
                                 <Dropdown.Item href='https://www.linkedin.com/in/david-situ-8514977a/' target="_blank">{linkedin}</Dropdown.Item>
                                 <Dropdown.Item href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting'>{contact}</Dropdown.Item>
@@ -121,9 +122,9 @@ class Navi extends React.Component {
                             : 
                             (<div className='links'>
                                 <div className='worded'>
-                                    <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
+                                    {/* <NavLink to="/about" style={{color: 'white'}}>About</NavLink>
                                     <NavLink to="/projects" style={{color: 'white'}}>Projects</NavLink>
-                                    <NavLink to="/resume" style={{color: 'white'}}>Resume</NavLink>
+                                    <NavLink to="/resume" style={{color: 'white'}}>Resume</NavLink> */}
                                 </div>
                                 <div className='social-media'>
                                     <a href='https://github.com/Codechiha' target="_blank" style={{color: 'white'}}>{github}</a>

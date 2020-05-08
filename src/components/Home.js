@@ -15,7 +15,7 @@ import Navi from './Navi';
 //Fonts and Images
 import logo from '../assets/dslogowhite2.png';
 import me from '../assets/pro-pic-pencils.png';
-import typing from '../assets/typing.jpg';
+import typing from '../assets/black-keyboard.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -187,9 +187,33 @@ const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 const Styles = styled.div`
 
+    p {
+        color: #e3e1da;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 6px;
+    }
+
+    .button {
+        padding: 20px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px 55px;
+        border: 2px solid lightgray;
+        background-color: #8a2019;
+        color: #e3e1da;
+        box-shadow: 5px 5px black;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+
     .main {
         background-image: url(${typing});
         height: 100vh;
+        background-position: center;
     }
 
     .logo {
@@ -199,12 +223,17 @@ const Styles = styled.div`
     }
 
     .intro {
-        color: white;
+        color: #e3e1da;
         font-weight: bold;
         font-size: 59px;
         justify-content: center;
         text-align: center;
-        padding-top: 331px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        margin-right: 67px;
+        margin-left: 67px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .next {
@@ -212,18 +241,28 @@ const Styles = styled.div`
         font-weight: bold;
         color: lightgray;
         letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .buttons {
+
     }
 `
 
 export const Home = () => (
     <Styles>
         <div className='main'>
+            <Navi />
             <img className='logo' src={logo} />
             <h2 className='intro'>
-                David Situ, Full Stack Web Developer
+                Full Stack Web Developer
             </h2>
+            <p>Bringing your website to reality with my keyboard</p>
             <div className='next'>
-                <p>Take a look at my projects</p>
+                <div className='buttons'>
+                    <button className='button'>My Projects</button>
+                    <button className='button'>Hire Me</button>
+                </div>
             </div>
         </div>
     </Styles>
