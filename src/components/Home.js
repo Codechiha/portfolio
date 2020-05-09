@@ -260,6 +260,40 @@ const Styles = styled.div`
         text-align: center;
     }
 
+//====================== Animation for Social Media Icons ============================
+      
+    @keyframes tada {
+        0% {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        10%, 20% {
+            -webkit-transform: scale(.9) rotate(-8deg);
+            -ms-transform: scale(.9) rotate(-8deg);
+            transform: scale(.9) rotate(-8deg);
+        }
+        
+        30%, 50%, 70% {
+            -webkit-transform: scale(1.3) rotate(8deg);
+            -ms-transform: scale(1.3) rotate(8deg);
+            transform: scale(1.3) rotate(8deg);
+        }
+        
+        40%, 60% {
+            -webkit-transform: scale(1.3) rotate(-8deg);
+            -ms-transform: scale(1.3) rotate(-8deg);
+            transform: scale(1.3) rotate(-8deg);
+        }
+        
+        80% {
+            -webkit-transform: scale(1) rotate(0);
+            -ms-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+        }
+    }
+
     .links {
         display: flex;
         justify-content: center;
@@ -270,10 +304,12 @@ const Styles = styled.div`
             margin-left: 25px;
 
             &:hover {
+                -webkit-animation: tada 2s linear infinite;
+                animation: tada 2s linear infinite;
             }
         }
     }
-`
+`;
 
 export const Home = () => (
     <Styles>
@@ -293,8 +329,8 @@ export const Home = () => (
                     </button>
                 </div>
                 <div className='links'>
-                    <a href='https://github.com/Codechiha' className='link' target="_blank" style={{color: '#969389'}}>{github}</a>
-                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' className='link' target="_blank" style={{color: '#969389'}}>{linkedin}</a>
+                    <a href='https://github.com/Codechiha' className='link' target="_blank" style={{color: '#c7c6c5'}}>{github}</a>
+                    <a href='https://www.linkedin.com/in/david-situ-8514977a/' className='link' target="_blank" style={{color: '#c7c6c5'}}>{linkedin}</a>
                 </div>
             </div>
         </div>
