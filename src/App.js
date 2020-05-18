@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 //Components
-import { About } from './components/About';
 import { Home } from './components/Home';
 import { Projects } from './components/Projects';
 import { Resume } from './components/Resume';
@@ -23,9 +22,6 @@ class App extends Component {
                 />
                 <Route path='/projects' 
                     render= {props => <Projects  {...props} />}
-                />
-                <Route path='/about' 
-                    render= {props => <About  {...props} />}
                 />
                 <Route path='/resume' 
                     render = {props => <Resume {...props} />}

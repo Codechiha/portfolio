@@ -17,14 +17,12 @@ import me from '../assets/pro-pic-pencils.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import typing from '../assets/black-keyboard.jpg';
+
 
 //Styling
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
-
-const github = <FontAwesomeIcon icon={faGithub} />
-const linkedin = <FontAwesomeIcon icon={faLinkedin} />
-const contact = <FontAwesomeIcon icon={faEnvelope} />
 
 // This is the Home Page
 const Styles = styled.div`
@@ -34,20 +32,30 @@ const Styles = styled.div`
     p {margin: 0; font-size: 19px;}
     li {font-family: sansation-regular; font-size: 17px;}
 
-    .main {
+    .container {
         border: 1px solid black;
         box-shadow: 3px 3px 0 0 darkgray;
         padding: 35px;
+        margin-top: 40px;
         margin-bottom: 20px;
+        background-color: #e3e1da;
     }
-    .row {}
-    .col1 {}
-    .col2 {}
+    .header {
+        padding: 10px;
 
-    .header {padding: 10px;}
+        h3 {
+            font-size: 55px; 
+            line-height: 47px;
+            font-family: sansation-bold;
+        }
+
+        h5 {
+            margin-top: 20px
+        }
+    }
     .section-headers {
         font-size: 24px; 
-        background-color: #26447f; 
+        background-color: #8a2019; 
         color: white; 
         height: 37px;
         letter-spacing: 2px;
@@ -61,22 +69,29 @@ const Styles = styled.div`
         margin-top: 20px;
     }
 
-    .contact {margin: 22px 0; line-height: 4;}
-    .skills {}
-    .title-sections {display: flex; flex-direction: row; justify-content: space-between; margin-top: 16px;}
-    .titles {}
-    .sub-titles {}
-    .dates {}
-    .body {}
+    .contact {
+        margin: 22px 0; 
+        line-height: 4;
+    }
 
+    .title-sections {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        margin-top: 16px;
+    }
+
+    .navbar {
+        background-color: black;
+    }
 
 `
 
 export const Resume = () => (
     <Styles>
-        <div>
+        <div className='main'>
             <Navi />
-            <Container className='main'>
+            <Container className='container'>
                 <Row className='row'>
                     <Col className='col1' lg={4}>
                         <div className='header'>
@@ -131,21 +146,22 @@ export const Resume = () => (
                                 <p>Jan. 2019 - Feb. 2019</p>
                             </div>
                             <p>
-                                This is a group project website that educates users about refugees and allows users to share refugee stories 
+                                This is a website that provides information about Refugees and allows users to share stories 
                             </p>
                             <ul>
-                                <li>Built backend using React, JSX and knex</li>
-                                <li>Rebuilt the frontend in March 2020 using React and JSX</li>
+                                <li>Built API for stories and users using Knex and SqLite3</li>
+                                <li>Rebuilt Login and Register Component UX using react-boostrap</li>
+                                <li>Re-designed the Home page UX using react-bootstrap</li>
                             </ul>
                             <div className ='title-sections'>
                                 <a href='https://serene-shaw-9adf0c.netlify.com/index.html' target='_blank'><h5 className='titles'>S and J Architecture</h5></a>
                                 <p>Nov. 2018 - Nov. 2018</p>
                             </div>
                             <p>
-                                This is a personal project website that aimed to imitate the design images of S and J Architecture
+                                A User Interface project built in one week
                             </p>
                             <ul>
-                                <li>Content and designs are rendered using HTML/CSS</li>
+                                <li>Content and designs are built using HTML/CSS</li>
                                 <li>Button and Menu event handlers are built using Javascript</li>
                             </ul>
                             {/* <div className ='title-sections'>
