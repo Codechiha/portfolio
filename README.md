@@ -19,10 +19,10 @@ This is a full-stack web developer portfolio for David Situ
 #### Other Tools Used
 
 Logo was built using 
-* [Namecheap] (https://www.namecheap.com/logo-maker?sitelink=lm_free&gclid=CjwKCAjw5Ij2BRBdEiwA0Frc9bElN782penOZ3vDqPK_nNfCW0vsuWMXs7aAuvr8wQbSDImWw3xH9RoCMz4QAvD_BwE) Free Logo Maker
+* [Namecheap](https://www.namecheap.com/logo-maker?sitelink=lm_free&gclid=CjwKCAjw5Ij2BRBdEiwA0Frc9bElN782penOZ3vDqPK_nNfCW0vsuWMXs7aAuvr8wQbSDImWw3xH9RoCMz4QAvD_BwE) Free Logo Maker
 
 and Edited using
-* [Photopea] (https://www.photopea.com/) Free Online Photo Editor
+* [Photopea](https://www.photopea.com/) Free Online Photo Editor
 
 ### Authors
 

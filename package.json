@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "http://Codechiha.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "node-sass": "^4.14.0",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -22,6 +23,8 @@
     "video-react": "^0.14.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
