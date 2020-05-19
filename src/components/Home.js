@@ -64,7 +64,7 @@ const Styles = styled.div`
 
         &:hover {
             background-color: black;
-            text-decoration: none;
+            text-decoration: underline;
             border: 1px solid lightgray;
             outline-color: rgba(255, 255, 255, 0);
             outline-offset: 15px;
@@ -180,6 +180,11 @@ const Styles = styled.div`
     }
 `;
 
+function handleClick(e) {
+    e.preventDefault();
+    window.location.href = 'mailto:davidsitu626@gmail.com?subject=We are interested in connecting'
+}
+
 export const Home = () => (
     <Styles>
         <div className='main'>
@@ -191,11 +196,11 @@ export const Home = () => (
             <p className='intro-p'>Bringing your ideas to reality with my keyboard</p>
             <div className='next'>
                 <div className='buttons'>
-                    <button className='button'>
-                        <NavLink to="/projects" style={{color: '#e3e1da'}}>Projects</NavLink>
-                    </button>
-                    <button className='button'>
-                        <a href='mailto:davidsitu626@gmail.com?subject=We are interested in connecting' style={{color: '#e3e1da'}}>Contact</a>
+                    
+                        <NavLink to="/projects" ><button className='button' style={{color: '#e3e1da'}}>Projects</button></NavLink>
+                    
+                    <button className='button' onClick={handleClick} style={{color: '#e3e1da'}}>
+                        Contact
                     </button>
                 </div>
                 <div className='links'>
